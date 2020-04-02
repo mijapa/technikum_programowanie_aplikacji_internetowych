@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Kontrola temperatury</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="index.css" rel="stylesheet">
+</head>
+<body>
+  <div id="content">
+    <div id="naglowek">
+      <h1><img src="napis.png" alt="napis"></h1>
+    </div>
+    <div id="lewy">
+      <div id="dane">
+        <span>Temperatura:</span> <input id="number" type="number">
+        <br><br>
+        <span>Data:</span> <input id="date" type="date">
+        <br><br>
+        <div id="przycisk">
+          <img id="dodaj" src="dodaj.png" onmousedown="add()" onmouseup="changeimg()">
+        </div>
+        <br>
+      </div>
+      <div id="obliczenia">
+        <span>Obliczenia:</span>
+        <br><br>
+        <span>Maksymalna temperatura:</span><span id="maxwynik"></span>
+        <br>
+        <span>Minimalna temperatura:</span><span id="minwynik"></span>
+        <br>
+        <span>Średnia temperatura:</span><span id="swynik"></span>
+      </div>
+    </div>
+    <div id="prawy">
+      <table id="table">
+        <tr>
+          <th>Data</th>
+          <th>Temperatura</th>
+          <th>Usuń</th>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
