@@ -32,13 +32,14 @@ function add() {
     newCell3.className = "btntd";
     btn.className = "btn"
     btn.innerHTML = "usun";
-    btn.onclick = function deleteRow(r) {//to nie działa jest to usuwanie pojedyńczych wierszy z tabelki za pomocą przycisku
-      var i = r.parentNode.parentNode.rowIndex;//to nie działa
+    btn.onclick = function deleteRow() {//to nie działa jest to usuwanie pojedyńczych wierszy z tabelki za pomocą przycisku
+      var i = this.parentNode.parentNode.rowIndex;//to nie działa
       document.getElementById("table").deleteRow(i);//to nie działa
+      liczenie();
     }
     newCell3.appendChild(btn);
 
-
+    liczenie();
 
     function liczenie() {//to nie działa ↓↓↓↓ 
       var table = document.getElementById("table"), maxwynik = Number.MIN_VALUE, minwynik = Number.MAX_VALUE, swynik = 0;
